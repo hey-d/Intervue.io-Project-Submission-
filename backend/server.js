@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, { cors: { origin: "https://live-poll-frontend-ycd5.onrender.com" } });
 
 let polls = []; // all polls (active or ended)
 const pollTimers = {}; // pollId -> timeout
