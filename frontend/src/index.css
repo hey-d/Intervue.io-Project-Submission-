@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --primary-600: #4f46e5; /* indigo-600 */
+  --primary-700: #4338ca;
+  --accent-500: #06b6d4; /* teal-ish */
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --success: #10b981;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255,0.6);
+}
+
+html,body,#root{
+  height:100%;
+}
+body{
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #eef2ff 200px);
+  color: #0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* subtle container */
+.app-container{
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 20px;
+}
+
+/* card */
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  padding: 20px;
+}
+
+/* button variants */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:8px; font-weight:600; padding:10px 14px; border-radius:10px;
+  cursor:pointer; transition:all .12s ease;
+}
+.btn-primary { background:var(--primary-600); color:white; box-shadow: 0 6px 14px rgba(79,70,229,0.15); }
+.btn-primary:hover { background:var(--primary-700); transform:translateY(-1px); }
+.btn-ghost { background:transparent; border:1px solid rgba(15,23,42,0.06); color:var(--primary-600); }
+.small { font-size:13px; color:var(--muted); }
+.label { font-size:13px; font-weight:600; color:#0f172a; }
+.input, .select {
+  width:100%; padding:10px 12px; border-radius:10px; border:1px solid #e6e9ef;
+  outline:none; font-size:14px; box-sizing:border-box;
+}
+.input:focus, .select:focus { box-shadow:0 6px 14px rgba(79,70,229,0.06); border-color:var(--primary-600); }
+
+/* results bar */
+.result-bar { height:18px; background:#eef2ff; border-radius:999px; overflow:hidden; }
+.result-fill { height:100%; background:var(--primary-600); text-align:right; padding-right:8px; color:white; font-size:12px; display:flex; align-items:center; justify-content:flex-end; }
+
+/* student list */
+.student-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.student-item { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px; border-radius:10px; background:linear-gradient(180deg,#fff,#fbfbff); border:1px solid #f1f5f9; }
